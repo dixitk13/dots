@@ -1,0 +1,34 @@
+# This is Git's per-user configuration file.
+# [user]
+# Please adapt and uncomment the following lines:
+#	name = <name>
+#	email = <email>
+[core]
+	autocrlf = input
+[pull]
+	ff = only
+[alias]
+	cm = checkout master
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	pullm = "pull origin master"
+	wip = commit -am 'wip'
+	myrebase = !git add -A && git commit --amend --no-edit
+	mycommit = "!git add -A && git commit -m "
+	myrank = "shortlog -n -s --no-merges"
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
