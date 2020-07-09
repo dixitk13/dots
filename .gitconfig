@@ -8,6 +8,7 @@
 [pull]
 	ff = only
 [alias]
+	lastdiff = diff-tree --no-commit-id --name-only -r HEAD
 	cm = checkout master
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	pullm = "pull origin master"
